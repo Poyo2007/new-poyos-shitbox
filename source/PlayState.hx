@@ -587,17 +587,6 @@ class PlayState extends MusicBeatState
 						bg.scale.x = 1.2;
 						bg.scale.y = 1.2;
 						add(bg);
-						
-						//PIXEL TRANSITION
-
-						bgspec = new FlxSprite(-428.5 + 50 + 700, -449.35 + 25 + 392 + 105 + 50).loadGraphic(Paths.image("SonicP2/GreenHill"));
-						bgspec.antialiasing = false;
-						bgspec.scrollFactor.set(1, 1);
-						bgspec.active = false;
-						bgspec.visible = false;
-						bgspec.scale.x = 8;
-						bgspec.scale.y = 8;
-						add(bgspec);
 					}
 			case 'no-noobs':
 			{
@@ -2585,7 +2574,7 @@ class PlayState extends MusicBeatState
 						dad.holdTimer = 0;
 						if (dad.curCharacter == 'poyoandjamey')
 						{
-						jamey.holdtimer = 0;
+						jamey.holdTimer = 0;
 						}
 	
 						if (SONG.needsVoices)
