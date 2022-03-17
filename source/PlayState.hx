@@ -1136,7 +1136,7 @@ class PlayState extends MusicBeatState
 
 		super.create();
 		
-		Paths.clearUnusedMemory()
+		Paths.clearUnusedMemory();
 	}
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
