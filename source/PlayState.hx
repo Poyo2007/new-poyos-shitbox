@@ -721,7 +721,7 @@ class PlayState extends MusicBeatState
 		dad = new Character(100, 100, SONG.player2);
 		if (dad.curCharacter == 'poyoandjamey')
 		{
-		jamey = new Character(150, 450, 'jamey')
+		jamey = new Character(150, 450, 'jamey');
 		}
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
