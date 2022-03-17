@@ -1,6 +1,5 @@
 package;
 
-import flixel.FlxGraphic;
 import flixel.math.FlxPoint;
 import flixel.graphics.frames.FlxFrame.FlxFrameAngle;
 import openfl.geom.Rectangle;
@@ -8,6 +7,7 @@ import flixel.math.FlxRect;
 import haxe.xml.Access;
 import openfl.system.System;
 import flixel.FlxG;
+import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
