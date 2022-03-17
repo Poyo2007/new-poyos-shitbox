@@ -195,6 +195,7 @@ class Paths
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
+	}
 	
 	// completely rewritten asset loading? fuck!
 	public static var currentTrackedAssets:Map<String, FlxGraphic> = [];
@@ -212,5 +213,4 @@ class Paths
 		return null;
 	}
     //STOLE YOUR CODE YOSHUBS LMAOOOOO
-	}
 }
