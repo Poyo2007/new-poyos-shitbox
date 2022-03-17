@@ -202,9 +202,6 @@ class PlayState extends MusicBeatState
 	var emeraldbeamyellow:FlxSprite;
 	var pebles:FlxSprite;
 	
-	var space:FlxButton;
-	var shift:FlxButton;
-	
 	var watchout:FlxSprite;
 
 	var fc:Bool = true;
