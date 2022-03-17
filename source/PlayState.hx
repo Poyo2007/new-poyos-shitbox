@@ -2585,10 +2585,10 @@ class PlayState extends MusicBeatState
 							luaModchart.executeState('playerTwoSing', [Math.abs(daNote.noteData), Conductor.songPosition]);
 						#end
 
-						dad.holdTimer = 0
+						dad.holdTimer = 0;
 						if (dad.curCharacter == 'poyoandjamey')
 						{
-						jamey.holdtimer = 0
+						jamey.holdtimer = 0;
 						}
 	
 						if (SONG.needsVoices)
