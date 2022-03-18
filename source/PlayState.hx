@@ -736,9 +736,9 @@ class PlayState extends MusicBeatState
 				dad.y += 65;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poyo':
-			  dad.y += 130;
+			  dad.y += 100;
 			case 'poyoandjamey':
-			  dad.y += 180;
+			  dad.y += 100;
 			case 'bf':
 			  dad.y += 100;
 			case 'jamey':
@@ -754,8 +754,8 @@ class PlayState extends MusicBeatState
 		  case 'gf-pixel':
 		    dad.y += 30;
 		  case 'gf-sonic':
-			  dad.x += 150;
-			  dad.y += 250;
+			  dad.x += 300;
+			  dad.y += 300;
 		}
 
 
@@ -769,7 +769,7 @@ class PlayState extends MusicBeatState
 		  case 'jamey':
 		    boyfriend.y += 350;
 		  case 'poyo':
-		    boyfriend.y += 130;
+		    boyfriend.y += 100;
 		}
 
 		// REPOSITIONING PER STAGE
@@ -2025,7 +2025,7 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.x = (originalX - (lengthInPx / 2)) + 335;
 
-    #if !mobile
+    #if mobile
 		if (FlxG.android.justReleased.BACK && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
@@ -2042,7 +2042,7 @@ class PlayState extends MusicBeatState
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		}
 		#else
-		if (controls.PAUSE && startedCountdown && canPause)
+		if (controls. && startedCountdown && canPause)
 		#end
 
 
