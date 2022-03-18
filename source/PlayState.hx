@@ -2025,7 +2025,7 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.x = (originalX - (lengthInPx / 2)) + 335;
 
-		if (		#if android FlxG.android.justReleased.BACK #else controls.PAUSE #end || && startedCountdown && canPause)
+		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end || && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
 			persistentDraw = true;
