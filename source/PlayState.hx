@@ -673,14 +673,10 @@ class PlayState extends MusicBeatState
 		} else {gfCheck = SONG.gfVersion;}
 
 		var curGf:String = '';
-		switch (gfCheck)
+		switch (songLowercase)
 		{
-			case 'gf-car':
-				curGf = 'gf-car';
-			case 'gf-christmas':
-				curGf = 'gf-christmas';
-			case 'gf-pixel':
-				curGf = 'gf-pixel';
+			case 'deadly-obsession':
+				curGf = 'gf-sonic';
 			default:
 				curGf = 'gf';
 		}
@@ -735,6 +731,10 @@ class PlayState extends MusicBeatState
 			case 'sonic':
 				dad.x -= 130;
 				dad.y += -50;
+			case 'hank':
+				dad.x -= 400;
+				dad.y += 65;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poyo':
 			  dad.y += 180;
 			case 'poyoandjamey':
@@ -765,11 +765,11 @@ class PlayState extends MusicBeatState
 		switch (SONG.player1)
 		{
 		  case 'bf':
-		    dad.y += 350;
+		    boyfriend.y += 350;
 		  case 'jamey':
-		    dad.y += 350;
+		    boyfriend.y += 350;
 		  case 'poyo':
-		    dad.y += 180;
+		    boyfriend.y += 180;
 		}
 
 		// REPOSITIONING PER STAGE
