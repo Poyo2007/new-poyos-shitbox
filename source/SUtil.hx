@@ -32,7 +32,7 @@ class SUtil
         }
 
         errMsg += e.error;
-        }
+    
 
         Sys.println("Making a simple alert ...");
 
@@ -42,6 +42,5 @@ class SUtil
 	
     public static function applicationAlert(title:String, description:String){
         Application.current.window.alert(description, title);
-    }
     }
 }
