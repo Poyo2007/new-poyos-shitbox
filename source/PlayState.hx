@@ -740,9 +740,9 @@ class PlayState extends MusicBeatState
 			case 'poyoandjamey':
 			  dad.y += 180;
 			case 'bf':
-			  dad.y += 150;
+			  dad.y += 100;
 			case 'jamey':
-			  dad.y += 150;
+			  dad.y += 100;
 		}
 		
 		switch (curGf)
@@ -775,6 +775,39 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+		  	case 'chamber':
+				boyfriend.x = 2040.55;
+				boyfriend.y = 685.6;
+
+				dad.x = 61.15;
+				dad.y = 687.6;
+
+				dad.scrollFactor.set(1.1, 1);
+				boyfriend.scrollFactor.set(1.1, 1);
+				
+			case 'SONICstage':
+				boyfriend.y += 25;
+				dad.y += 200;
+				dad.x += 200;
+				#if !OPTIMIZE
+				{
+				dad.scale.x = 1.1;
+				dad.scale.y = 1.1;
+				}
+				#else
+      	{
+				dad.scale.x = 6.1;
+				dad.scale.y = 6.1;
+				}
+				#end
+				dad.scrollFactor.set(1.37, 1);
+				boyfriend.scrollFactor.set(1.37, 1);
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 100);
+		  case 'hank':
+				boyfriend.x += 200;
+				gf.x += 180;
+				gf.y += 220;
+	
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;
