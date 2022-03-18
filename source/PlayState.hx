@@ -2025,7 +2025,8 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.x = (originalX - (lengthInPx / 2)) + 335;
 
-		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end || && startedCountdown && canPause)
+    #if !mobile
+		if (FlxG.android.justReleased.BACK && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
 			persistentDraw = true;
@@ -2040,6 +2041,9 @@ class PlayState extends MusicBeatState
 			else
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		}
+		#else
+		if (controls.PAUSE && startedCountdown && canPause)
+		#end
 
 
 		if (FlxG.keys.justPressed.SEVEN)
