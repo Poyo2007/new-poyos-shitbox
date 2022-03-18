@@ -736,7 +736,7 @@ class PlayState extends MusicBeatState
 				dad.y += 65;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poyo':
-			  dad.y += 180;
+			  dad.y += 130;
 			case 'poyoandjamey':
 			  dad.y += 180;
 			case 'bf':
@@ -769,7 +769,7 @@ class PlayState extends MusicBeatState
 		  case 'jamey':
 		    boyfriend.y += 350;
 		  case 'poyo':
-		    boyfriend.y += 180;
+		    boyfriend.y += 130;
 		}
 
 		// REPOSITIONING PER STAGE
@@ -2025,7 +2025,7 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.x = (originalX - (lengthInPx / 2)) + 335;
 
-		if (controls.PAUSE && startedCountdown && canPause)
+		if (		#if android FlxG.android.justReleased.BACK #else controls.PAUSE #end || && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
 			persistentDraw = true;
