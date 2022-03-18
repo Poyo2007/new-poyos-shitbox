@@ -399,20 +399,6 @@ class PlayState extends MusicBeatState
 		}
 
 		//defaults if no stage was found in chart
-		var stageCheck:String = 'stage';
-		
-		if (SONG.stage == null) {
-			switch(storyWeek)
-			{
-				case 2: stageCheck = 'halloween';
-				case 3: stageCheck = 'philly';
-				case 4: stageCheck = 'limo';
-				case 5: if (songLowercase == 'winter-horrorland') {stageCheck = 'mallEvil';} else {stageCheck = 'mall';}
-				case 6: if (songLowercase == 'thorns') {stageCheck = 'schoolEvil';} else {stageCheck = 'school';}
-				//i should check if its stage (but this is when none is found in chart anyway)
-			}
-		} else {stageCheck = SONG.stage;}
-
 		if (FlxG.save.data.bg)
 		{
 
@@ -422,8 +408,6 @@ class PlayState extends MusicBeatState
 			{
 				defaultCamZoom = 1.0;
 				curStage = 'SONICstage';
-
-
 
 				var sSKY:FlxSprite = new FlxSprite(-222, -16 + 150).loadGraphic(Paths.image('PolishedP1/SKY'));
 				sSKY.antialiasing = true;
