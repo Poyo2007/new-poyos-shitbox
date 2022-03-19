@@ -9,15 +9,17 @@ class Ratings
 			ranking = "BotPlay";
 
         if (PlayState.misses == 0 && PlayState.bads == 0 && PlayState.shits == 0 && PlayState.goods == 0) // Marvelous (SICK) Full Combo
-            ranking = "(MFC)";
+            ranking = "( REAL GAMER FC (MFC) )";
         else if (PlayState.misses == 0 && PlayState.bads == 0 && PlayState.shits == 0 && PlayState.goods >= 1) // Good Full Combo (Nothing but Goods & Sicks)
-            ranking = "(GFC)";
+            ranking = "( You did amazing (GFC) )";
         else if (PlayState.misses == 0) // Regular FC
-            ranking = "(FC)";
+            ranking = "(You did great! (FC) )";
         else if (PlayState.misses < 10) // Single Digit Combo Breaks
-            ranking = "(SDCB)";
+            ranking = "( Ya did good (SDCB) )";
+        else if (PlayState.misses < 1000)
+            ranking = "( Kinda bad but ill take it (Clear) )";
         else
-            ranking = "(Clear)";
+            ranking = "( How the ACTUAL. FUCK. ARE YOU THIS BAD (THIS AINT EVEN A PASS BRUH PRACTICE) )";
 
         // WIFE TIME :)))) (based on Wife3)
 

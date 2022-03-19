@@ -736,13 +736,13 @@ class PlayState extends MusicBeatState
 				dad.y += 65;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poyo':
-			  dad.y += 130;
+			  dad.y += 140;
 			case 'poyoandjamey':
-			  dad.y += 130;
+			  dad.y += 140;
 			case 'bf':
-			  dad.y += 100;
+			  dad.y += 350;
 			case 'jamey':
-			  dad.y += 250;
+			  dad.y += 350;
 		}
 		
 		switch (curGf)
@@ -769,7 +769,7 @@ class PlayState extends MusicBeatState
 		  case 'jamey':
 		    boyfriend.y += 350;
 		  case 'poyo':
-		    boyfriend.y += 100;
+		    boyfriend.y += 140;
 		}
 
 		// REPOSITIONING PER STAGE
@@ -1016,7 +1016,7 @@ class PlayState extends MusicBeatState
 		if (loadRep)
 			add(replayTxt);
 		// Literally copy-paste of the above, fu
-		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (PlayStateChangeables.useDownscroll ? 100 : -100), 0, "BOTPLAY", 20);
+		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (PlayStateChangeables.useDownscroll ? 100 : -100), 0, "git gud lmao (Botplay)", 20);
 		botPlayState.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
 		botPlayState.borderSize = 4;
