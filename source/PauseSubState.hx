@@ -48,10 +48,6 @@ class PauseSubState extends MusicBeatSubstate
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
 		FlxG.sound.list.add(pauseMusic);
-		
-		#if mobileC
-		addVirtualPad(FULL, A_B);
-		#end
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
@@ -103,9 +99,9 @@ class PauseSubState extends MusicBeatSubstate
 
 		changeSelection();
 
-		//#if mobileC
-		//addVirtualPad(UP_DOWN, A);
-		//#end
+		#if mobileC
+		addVirtualPad(UP_DOWN, A);
+		#end
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 	}

@@ -748,14 +748,14 @@ class PlayState extends MusicBeatState
 		switch (curGf)
 		{
 		  case 'gf':
-		    dad.y += 30;
+		    gf.y += 30;
 		  case 'gf-christmas':
-		    dad.y += 30;
+		    gf.y += 30;
 		  case 'gf-pixel':
-		    dad.y += 30;
+		    gf.y += 30;
 		  case 'gf-sonic':
-			  dad.x += 300;
-			  dad.y += 300;
+			  gf.x += 150;
+			  gf.y += 250;
 		}
 
 
@@ -2042,7 +2042,21 @@ class PlayState extends MusicBeatState
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		}
 		#else
-		if (controls. && startedCountdown && canPause)
+		if (controls.PAUSE && startedCountdown && canPause)
+		{
+			persistentUpdate = false;
+			persistentDraw = true;
+			paused = true;
+
+			// 1 / 1000 chance for Gitaroo Man easter egg
+			if (FlxG.random.bool(0.1))
+			{
+				trace('GITAROO MAN EASTER EGG');
+				FlxG.switchState(new GitarooPause());
+			}
+			else
+				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+		}
 		#end
 
 
