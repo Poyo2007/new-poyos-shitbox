@@ -736,13 +736,13 @@ class PlayState extends MusicBeatState
 				dad.y += 65;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'poyo':
-			  dad.y += 100;
+			  dad.y += 130;
 			case 'poyoandjamey':
-			  dad.y += 100;
+			  dad.y += 130;
 			case 'bf':
 			  dad.y += 100;
 			case 'jamey':
-			  dad.y += 100;
+			  dad.y += 250;
 		}
 		
 		switch (curGf)
@@ -2802,7 +2802,9 @@ class PlayState extends MusicBeatState
 
 					FlxG.sound.music.stop();
 					vocals.stop();
+					#if mobile
 					remove(mcontrols);
+					#end
 					if (FlxG.save.data.scoreScreen)
 						openSubState(new ResultsScreen());
 					else
@@ -2877,7 +2879,9 @@ class PlayState extends MusicBeatState
 				FlxG.sound.music.stop();
 				vocals.stop();
 
+        #if mobile
 				remove(mcontrols);
+				#end
 				if (FlxG.save.data.scoreScreen)
 					openSubState(new ResultsScreen());
 				else
