@@ -653,6 +653,23 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 100, -27);
 				addOffset("singDOWN", 0, 80);
 				
+				case 'nafri':
+				var tex = Paths.getSparrowAtlas('characters/shitbox/Nafri','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up', 24, false);
+        animation.addByPrefix('singLEFT', 'Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Down', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 33);
+				addOffset("singRIGHT", 53, -6);
+				addOffset("singLEFT", 20, -22);
+				addOffset("singDOWN", -20, -60);
+
+				playAnim('idle');
+				
 				case 'poyoandjamey':
 				var tex = Paths.getSparrowAtlas('characters/shitbox/poyolmao' ,'shared');
 				frames = tex;
